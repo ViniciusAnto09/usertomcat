@@ -1,6 +1,8 @@
 FROM java:8-jre
 
 RUN apt-get update && \
+    apt-get install nano &&\
+    apt-get install vi &&\
     apt-get install -yq --no-install-recommends wget pwgen ca-certificates && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
